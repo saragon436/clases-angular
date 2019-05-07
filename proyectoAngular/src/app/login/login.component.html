@@ -1,0 +1,26 @@
+<div *ngIf="this.ocultar && this.muestra">
+  Inicio Session<br>
+usuario<input type="text" (input)="this.usuaio=$event.target.value">
+<br>
+clave<input type="password" (input)="this.conrasena=$event.target.value">
+<br>
+<button (click)="this.muestra=!this.muestra">Login</button>
+<button (click)="this.ocultar=!this.ocultar">Registrar</button>
+</div>
+<div *ngIf="!this.ocultar">
+  Registro<br>
+  nombre<input type="text" (input)="this.usuaio=$event.target.value">
+<br>
+apellido<input type="text" (input)="this.conrasena=$event.target.value">
+<br>
+<button (click)="this.ocultar=!this.ocultar">Login</button>
+</div>
+<div *ngIf="!this.muestra">
+  Listado<br>
+  <ul>
+      <li *ngFor="let receta of this.recetas">{{receta.titulo}}</li>
+  </ul>
+  <br>
+  <button (click)="this.muestra=!this.muestra">Salir</button>
+</div>
+
