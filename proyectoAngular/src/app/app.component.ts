@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'proyectoAngular';
 
   mostrar: boolean = true
+
+  ocultar(ocu:boolean){
+    this.mostrar=ocu;
+  }
 }

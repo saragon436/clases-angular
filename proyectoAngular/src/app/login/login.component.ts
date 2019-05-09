@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
 
   ingresar() {
     /* alert(this.usuario + " " + this.contrasena) */
-    this.onLogin.emit()
+    this.mostrar
+    this.onLogin.emit(!this.mostrar);
   }
 
 }

@@ -1,3 +1,5 @@
 <p>
-  listado works!
+<app-receta *ngFor="let receta of recetas; let indice=index" [indice]="indice" [recetas]="receta" (onSalida)="eliminar($event)"></app-receta>
 </p>
+<br>
+<button type="button" class="btn btn-success" (click)="ingresar()">Regresar</button>
