@@ -1,4 +1,5 @@
 import { Component, OnInit , Input , Output , EventEmitter} from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-receta',
@@ -12,13 +13,14 @@ export class RecetaComponent implements OnInit {
   @Input() indice: number
 
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit() {
   }
 
   eliminar(){
-    this.onSalida.emit(this.indice)
+    //this.onSalida.emit(this.indice)
+    this.dataService.eliminar(this.indice);
   }
 
 }
